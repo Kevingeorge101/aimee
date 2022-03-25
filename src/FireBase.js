@@ -2,12 +2,9 @@ import {initializeApp} from "firebase/app";
 import 'firebase/compat/firestore';
 import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 
-import { Redirect } from 'react-router-dom'
 
 
-var test = {}
-
-const firebaseConfig = {
+export const firebaseConfig = {
     apiKey: "AIzaSyCfF4fj6zvNOdv7NEO_-3P6bcKLyAnPTiY",
     authDomain: "aimee-major.firebaseapp.com",
     projectId: "aimee-major",

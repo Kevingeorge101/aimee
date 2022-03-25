@@ -6,11 +6,18 @@ import Home from './components/Home';
 import reportWebVitals from './reportWebVitals';
 
 import {Route, Link, Switch, BrowserRouter as Router} from 'react-router-dom'
+import UserProfile from './components/UserProfile';
+import Diagnose from './components/Diagnose';
+import Appointments from './components/Appointments';
 
 const routing = (
   <Router>
     <Route exact path="/" component={App} />
     <Route path="/home" component={Home} />
+    <Route path="/userprofile" component={UserProfile} />
+    <Route path="/diagnose" component={Diagnose} />
+    <Route path="/appointments" component={Appointments} />
+
   </Router>
 )
 
