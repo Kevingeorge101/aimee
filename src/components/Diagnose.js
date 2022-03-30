@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
 import './Diagnose.css'
-import 'firebase/firestore';
 import 'firebase/analytics';
 import { firebaseConfig } from '../FireBase';
+import 'firebase/compat/firestore';
+import firebase from 'firebase/compat/app';
+
 
 import Home from './Home';
 
@@ -11,8 +13,9 @@ import { auth } from '../FireBase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-import firebase from 'firebase/compat/app';
 import { useHistory } from 'react-router-dom';
+
+
 firebase.initializeApp(firebaseConfig)
 
 const firestore = firebase.firestore();
@@ -59,7 +62,10 @@ function ChatRoom() {
         uid,
         photoURL
       })
-  
+      
+      //sending data to a text file - 'fs' does not work in react, try sending directly to the API
+      console.log(formValue)
+
       setFormValue('');
       dummy.current.scrollIntoView({ behavior: 'smooth' });
     }

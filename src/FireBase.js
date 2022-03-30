@@ -1,9 +1,9 @@
 import {initializeApp} from "firebase/app";
-import 'firebase/compat/firestore';
+import { getFirestore } from "firebase/firestore";
 import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 
 
-
+//Firebase Configuration
 export const firebaseConfig = {
     apiKey: "AIzaSyCfF4fj6zvNOdv7NEO_-3P6bcKLyAnPTiY",
     authDomain: "aimee-major.firebaseapp.com",
@@ -16,17 +16,26 @@ export const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app) //get all info of the authenticated user, we can export and use this in other files too
-//above 
 
+
+//Databse connectivity
+export const db = getFirestore(app)//db var getting populated with all of our app's firestore info
+
+export var userData={};
+
+export var signedInUserEmail = ""
+
+//Sign-In Code
 const provider = new GoogleAuthProvider(); 
-
-
 
 export const SignInWithG = () => {
 
     signInWithPopup(auth, provider)
     .then((result) => {
-      
+      userData = result
+      signedInUserEmail = result.user.email
+      console.log("Email is", signedInUserEmail)
+      console.log("FP userData", userData)
       console.log(result) //this result object contains the user details after sign in 
       //check the object in the console
       //perhaps use it to navigate to user profile after login
