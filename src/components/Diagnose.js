@@ -17,6 +17,7 @@ import { useHistory } from 'react-router-dom';
 
 
 firebase.initializeApp(firebaseConfig)
+//const auth = firebase.auth()
 
 const firestore = firebase.firestore();
 
@@ -50,7 +51,7 @@ function ChatRoom() {
   
     const [formValue, setFormValue] = useState('');
   
-  
+    console.log(auth.currentUser)
     const sendMessage = async (e) => {
       e.preventDefault();
   

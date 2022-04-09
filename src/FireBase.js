@@ -5,13 +5,13 @@ import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 
 //Firebase Configuration
 export const firebaseConfig = {
-    apiKey: "AIzaSyCfF4fj6zvNOdv7NEO_-3P6bcKLyAnPTiY",
-    authDomain: "aimee-major.firebaseapp.com",
-    projectId: "aimee-major",
-    storageBucket: "aimee-major.appspot.com",
-    messagingSenderId: "872442042766",
-    appId: "1:872442042766:web:4a3bff296fcdc0c0fcacdf",
-    measurementId: "G-YKHVM5YWXY"
+  apiKey: "AIzaSyA_e2kmZdiG_8ncLUswb8ict39YpJcqtF8",
+  authDomain: "aimee2.firebaseapp.com",
+  projectId: "aimee2",
+  storageBucket: "aimee2.appspot.com",
+  messagingSenderId: "144642265498",
+  appId: "1:144642265498:web:0d771769170091392fea23",
+  measurementId: "G-MKXNW3SE0Y"
 };
 
 const app = initializeApp(firebaseConfig)
