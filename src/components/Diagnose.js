@@ -29,7 +29,7 @@ const firestore = firebase.firestore();
 const Diagnose = () => {
     let history = useHistory()
     const [user] = useAuthState(auth);
-    
+
     return(
         <div className="App1">
             <header>
@@ -44,20 +44,17 @@ const Diagnose = () => {
     )
 }
 
-const getUserId = () => {
-  const { uid, photoURL } = auth.currentUser;
-  return uid;
-}
-
 function ChatRoom() {
     const dummy = useRef();
-    
     const messagesRef = firestore.collection('messages');
-    const query = messagesRef.where("to","==",getUserId()).orderBy('createdAt');
+
+    var user = ""
+    if (auth.currentUser) {
+      user = auth.currentUser.uid
+    }
+    const query = messagesRef.where("to","==", user).orderBy('createdAt');
   
     const [messages,loading,error,snapshot] = useCollectionData(query, { idField: 'id' });
-
-    console.log(error);
 
     const [formValue, setFormValue] = useState('');
 
@@ -142,7 +139,7 @@ function ChatRoom() {
   
     return (<>
       <div className={`message ${messageClass}`}>
-        <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
+        <img src={photoURL || "https://www.kindpng.com/picc/m/495-4952535_create-digital-profile-icon-blue-user-profile-icon.png"} />
         <p>{text}</p>
       </div>
     </>)

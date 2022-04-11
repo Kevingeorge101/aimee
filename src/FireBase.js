@@ -15,11 +15,11 @@ export const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig)
-export const auth = getAuth(app) //get all info of the authenticated user, we can export and use this in other files too
+export const auth = getAuth(app) // get all info of the authenticated user, we can export and use this in other files too
 
 
 //Databse connectivity
-export const db = getFirestore(app)//db var getting populated with all of our app's firestore info
+export const db = getFirestore(app) // db var getting populated with all of our app's firestore info
 
 export var userData={};
 
