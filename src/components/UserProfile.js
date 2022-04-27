@@ -76,19 +76,18 @@ const UserProfile = () =>{
             <label>Email</label>
             <input placeholder="Email" type="email" value={currEmail} style={{width:"500px"}} /><br /><br />
 
-            <label>Height</label>
-            <input placeholder="Height" value={currHeight} style={{width:"500px"}}  /><br /><br />
+            <label className="ht">Height</label>
+            <input className="height" placeholder="Height" value={currHeight} style={{width:"500px"}}  /><br /><br />
 
-            <label>Weight</label>
-            <input placeholder="Weight" value={currWeight} style={{width:"500px"}} /><br /><br />
+            <label className="wt">Weight</label>
+            <input className="weight" placeholder="Weight" value={currWeight} style={{width:"500px"}} /><br /><br />
 
-            <label>Allergies</label>
-            <input placeholder="Allergies" value={currAllergies} style={{width:"500px"}} /><br /><br />
+            <label className="all">Allergies</label>
+            <input className="allergies" placeholder="Allergies" value={currAllergies} style={{width:"500px"}} /><br /><br />
 
-            <label>Chronic Diseases</label>
-            <input placeholder="Chronic Diseases" value={currChronic} style={{width:"500px"}} /><br />
+            <label className="cd">Chronic Diseases</label>
+            <input className="chdiseaes" placeholder="Chronic Diseases" value={currChronic} style={{width:"500px"}} /><br />
 
-            
 
         </div>
     )

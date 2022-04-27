@@ -1,9 +1,10 @@
 import Navbar from "./Navbar";
-import {Button} from '@mui/material';
 import { useHistory } from "react-router-dom";
 import { auth } from "../FireBase";
 import { useState } from "react";
-
+import ButtonAppBar from './Appbar';
+import Button from '@mui/material/Button';
+import './Home.css';
 
 const Home = () => {
 
@@ -14,20 +15,17 @@ const Home = () => {
         <div>
             
             <div className="sticky">
-                <Navbar />
+            <ButtonAppBar className="Navz" />
             </div>
             <div>
-                <h1>This is user's home page</h1>
-                <h3>Hi, Welcome </h3>
+     
+            <img className="Diag" src='./assets/diagnosis.png' />
+            <img className="profile" src='./assets/profile.png' />
+            <button className="Diagnose" 
+                onClick={()=>{ history.push('diagnose') }}>Diagnose Now</button>
+            <button className="prof" 
+                onClick={()=>{ history.push('UserProfile') }}>User Profile</button>
 
-                <Button variant="contained" color="primary" sx={{m : 4}} onClick={ () => history.push('appointments')} >
-                    Appointments
-                </Button>
-                
-                <Button variant="contained" color="primary" sx={{m : 4}} 
-                onClick={()=>{ history.push('diagnose') }}>
-                    Diagnose  
-                </Button>
             </div>
         </div>
     )

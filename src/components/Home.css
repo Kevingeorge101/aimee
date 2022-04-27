@@ -1,42 +1,79 @@
-.Homepage {
-  text-align: center;
+.Diag{
+  height: 300px;
+  width: 300px; 
+  padding-right: 0rem;
+  border-radius: 0;
+  padding-left: 30rem;
 }
 
-.Homepage-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile{
+  height: 300px;
+  width: 300px; 
+  padding-right: 25rem;
+  border-radius: 0;
+  padding-left: 0rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .Homepage-logo {
-    animation: Homepage-logo-spin infinite 20s linear;
+.Diagnose {
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 12px 16px 12px 42px;
+  border: 1.5px solid #0a6bff;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  color:#0a6bff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+  min-height: 56px;
+  min-width: 120px;
+  position: absolute;
+  top: 30rem;
+  left: 33rem;
+}
+
+.Diagnose:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .Diagnose {
+    padding: 16px 44px;
+    min-width: 150px;
   }
 }
 
-.Homepage-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.prof{
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 12px 16px 12px 42px;
+  border: 1.5px solid #0a6bff;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  color:#0a6bff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+  min-height: 56px;
+  min-width: 120px;
+  position: absolute;
+  top: 30rem;
+  left: 53rem;
 }
 
-.Homepage-link {
-  color: #6b36e4;
+.prof:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.row {
-  padding: 100px 100px 500px 300px;
-}
-
-@keyframes Homepage-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 768px) {
+  .prof {
+    padding: 16px 44px;
+    min-width: 150px;
   }
 }
