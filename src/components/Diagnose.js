@@ -18,7 +18,7 @@ import { useHistory } from 'react-router-dom';
 
 const apiLink = "http://127.0.0.1:5000/";
 const aimee = "Zuk57jsYXvSOFoRq79nGAkUJ5w33"
-const aimee_photo = "https://d2cbg94ubxgsnp.cloudfront.net/Pictures/2000xAny/9/9/2/512992_shutterstock_715962319converted_749269.png"
+const aimee_photo = process.env.PUBLIC_URL+"/assets/aimee.png"
 
 firebase.initializeApp(firebaseConfig)
 //const auth = firebase.auth()
@@ -31,15 +31,17 @@ const Diagnose = () => {
     const [user] = useAuthState(auth);
 
     return(
-        <div className="App1">
+      <div className='whitewash'>
+          <div className="App1">
             <header>
-                <h1>⚛️🔥💬</h1>
+                <h1 className='noto'>AIMEE</h1>
                 <button onClick={() => { history.push('home') }}>Back</button>
             </header>
 
             <section>
                 {<ChatRoom />}
             </section>
+          </div>
         </div>
     )
 }
@@ -125,7 +127,7 @@ function ChatRoom() {
   
         <input value={formValue} name="message" onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
   
-        <button onClick={callAPI} type="submit" disabled={!formValue}>🕊️</button>
+        <button onClick={callAPI} type="submit" disabled={!formValue}>➤</button>
   
       </form>
     </>)

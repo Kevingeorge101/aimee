@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import { useHistory } from "react-router-dom";
 import { auth } from "../FireBase";
 import { useState } from "react";
@@ -14,13 +13,12 @@ const Home = () => {
     return(
         <div>
             
-            <div className="sticky">
-            <ButtonAppBar className="Navz" />
-            </div>
+            <ButtonAppBar />
+
             <div>
      
-            <img className="Diag" src='./assets/diagnosis.png' />
-            <img className="profile" src='./assets/profile.png' />
+            <img className="Diag" src={process.env.PUBLIC_URL+"/assets/diagnosis.png"} />
+            <img className="profile" src={process.env.PUBLIC_URL+"/assets/profile.png"} /> 
             <button className="Diagnose" 
                 onClick={()=>{ history.push('diagnose') }}>Diagnose Now</button>
             <button className="prof" 

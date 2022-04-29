@@ -19,7 +19,7 @@ const Frontpage = () => {
     return(
         <div>
            
-           <img className="logo" src={"./Logo.png"} />
+           <img className="logo" src={process.env.PUBLIC_URL+"/assets/Logo.png"}  />
             <h1>AIMEE</h1>
             <h2>Arificially Intelligent Medical Expert Entity</h2>
             <h3>Answers to your medical queries at your fingertips!</h3>

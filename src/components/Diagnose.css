@@ -3,10 +3,11 @@
     text-align: center;
     max-width: 728px;
     margin: 0 auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
   }
   
   .App1 header {
-    background-color: #181717;
+    background-color: #0a6bff;
     height: 10vh;
     min-height: 50px;
     color: white;
@@ -20,6 +21,7 @@
     z-index: 99;
     padding: 10px;
     box-sizing: border-box;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
   }
   
   .App1 section {
@@ -27,7 +29,7 @@
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    background-color: rgb(40, 37, 53);
+    background-color: #f3f3f3;
   }
   
   main {
@@ -44,11 +46,11 @@
   }
   
   main::-webkit-scrollbar-track {
-    background: #1e1e24;
+    background: #acacac;
   }
   
   main::-webkit-scrollbar-thumb {
-    background: #6649b8;
+    background: #000000;
   }
   
   form {
@@ -64,7 +66,8 @@
   
   form button {
     width: 20%;
-    background-color: rgb(56, 56, 143);
+    background-color: #0a6bff;
+    font-size: 2rem;
   }
   
   
@@ -72,17 +75,17 @@
     line-height: 1.5;
     width: 100%;
     font-size: 1.5rem;
-    background: rgb(58, 58, 58);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: #0a6bff;
     outline: none;
     border: none;
     padding: 0 10px;
   }
   
   button {
-    background-color: #282c34; /* Green */
+    background-color: #0952c0; /* Green */
     border: none;
-    color: white;
+    color: #ffffff;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -135,12 +138,15 @@
   
   .sent p {
     color: white;
-    background: #0b93f6;
+    background: #0a6bff;
     align-self: flex-end;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
   }
   .received p {
-    background: #e5e5ea;
+    background: #ffffff;
     color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   
   img {
@@ -150,4 +156,13 @@
     margin: 2px 5px;
   }
   
-  
+.noto {
+  font-family: 'Noto Sans', sans-serif;
+  font-size:xx-large;
+  padding: 0%;
+  margin-left: 20px;
+}
+
+.whitewash {
+  background-image: url("/public/assets/white.png");
+}

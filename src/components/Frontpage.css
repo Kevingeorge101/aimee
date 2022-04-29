@@ -68,12 +68,6 @@
   }
 }
 
-.Navz{
-  float: right;
-  display: block;
-}
-  
-
 h1{
   text-align: left;
   padding-left: 5rem;
@@ -107,7 +101,7 @@ h3{
 }
 
 body{
-  background-image: url("./Waves.jpg");
+  background-image: url("/public/assets/Waves.jpg");
   background-repeat: no-repeat;
   background-position-y: -185px;
   padding: 0;
@@ -116,7 +110,7 @@ body{
 
 .logo{
   height: 400px;
-  width: 400px; 
+  width: 600px; 
   float: right;
   padding-right: 10rem;
 }
