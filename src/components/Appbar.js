@@ -12,6 +12,7 @@ import Navbar from "./Navbar";
 import { useHistory } from "react-router-dom";
 import { auth } from "../FireBase";
 import { useState } from "react";
+import { logOut } from '../FireBase';
 
 const theme = createTheme({
     typography: {
@@ -33,14 +34,16 @@ const darkTheme = createTheme({
 
 export default function ButtonAppBar() {
 
+  let history = useHistory()
+
   return (
     <Box sx={{ flexGrow: 1 }}>
         <ThemeProvider theme={darkTheme}>
       <AppBar position="relative">
         <Toolbar sx={{justifyContent:'flex-end'}}>
         <Button color="inherit"  >User Name</Button>
-          <Button color="inherit" >User Profile</Button>
-          <Button color="inherit" variant="outlined">Logout</Button>
+          <Button color="inherit" onClick={()=>{ history.push('UserProfile') }}  >User Profile</Button>
+          <Button color="inherit" onClick={()=>{ history.push('/') }} variant="outlined">Logout</Button>
         </Toolbar>
       </AppBar>
       </ThemeProvider>
