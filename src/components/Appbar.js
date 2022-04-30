@@ -18,15 +18,25 @@ const darkTheme = createTheme({
   },
 });
 
+var user = ""
+if(auth.currentUser)
+     {
+         user = auth.currentUser.displayName
+         console.log("nowww", user)
+     }
+
 export default function ButtonAppBar() {
+
+  let history = useHistory()
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <ThemeProvider theme={darkTheme} enableColorOnDark>
         <AppBar position="relative">
           <Toolbar sx={{ justifyContent: "flex-end" }}>
-            <Button color="primary">User Name</Button>
-            <Button color="primary">User Profile</Button>
-            <Button color="primary" variant="outlined">
+            <Button color="primary">Hi, {user}</Button>
+            <Button color="primary" onClick={()=>{ history.push('UserProfile') }} >User Profile</Button>
+            <Button color="primary" variant="outlined" onClick={()=>{ history.push('/') }} >
               Logout
             </Button>
           </Toolbar>
